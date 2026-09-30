@@ -18,7 +18,7 @@ function App() {
     setstatus(true)
 
     axios.post("http://localhost:5000/sendmail",{msg:msg,emaillists:emaillists}).then((item)=> {
-      if (item.data == true) {
+      if (item.data === true) {
         alert("Email sent.")
         setstatus(false)
       }
